@@ -1,17 +1,19 @@
 # Trips
-This is the Angular component of the trips application.
+This is the Angular component of the trips application. <br />
 Other components are:
-SpringBoot server + photo directory on that SpringBoot server;
-MSSQL data base, where the metadata about the photos and routes per day are located.
+<ul>
+<li>SpringBoot server + photo directory on that SpringBoot server;</ul>
+<li>MSSQL data base, where the metadata about the photos and routes per day are located. </li>
+</ul>
 I assume that the server is running at localhost:8080.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 # To install leaflet stuff(that's to enable the map):
-npm i leaflet
-npm i --save-dev @types/leaflet
-npm install leaflet-routing-machine@latest
-npm i --save-dev @types/leaflet-routing-machine
+npm i leaflet <br />
+npm i --save-dev @types/leaflet <br />
+npm install leaflet-routing-machine@latest <br />
+npm i --save-dev @types/leaflet-routing-machine <br />
 
 ## Development server
 
