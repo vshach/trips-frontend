@@ -2,7 +2,7 @@
 This is the Angular component of the trips application. <br />
 Other components are:
 <ul>
-<li>SpringBoot server + photo directory on that SpringBoot server;</ul>
+<li>SpringBoot server + photo directory on that SpringBoot server;</li>
 <li>MSSQL data base, where the metadata about the photos and routes per day are located. </li>
 </ul>
 I assume that the server is running at localhost:8080.
