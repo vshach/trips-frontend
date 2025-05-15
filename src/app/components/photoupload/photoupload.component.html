@@ -1,0 +1,37 @@
+<p>Upload a photo</p>
+
+<form (ngSubmit)="upload()" #uploadForm="ngForm">
+    <label>
+      Location:
+      <select name="locations" id="locations" type="select" [(ngModel)]="selectedLocation" required>        
+        @for (loc of locations; track loc) {
+          <option value={{loc.id}}> {{loc.name}} </option>
+        }
+      </select>
+      <!-- input type="text" name="locationID" [(ngModel)]="locationID" required / -->
+    </label>
+  
+    <label>
+      People in the photo:
+      <input type="text" name="people" [(ngModel)]="people" required />
+    </label>
+      
+    <label>
+        Date taken:
+        <input type="text" name="dateTaken" [(ngModel)]="dateTaken" required />
+    </label>
+
+    <label>
+      Select Photo:
+      <input type="file" (change)="onFileSelected($event)" accept=".jpg,.jpeg,.png" required />
+    </label>
+  
+      <!-- Image Preview -->
+    <div *ngIf="previewUrl" style="margin-top: 1rem;">
+        <strong>Preview:</strong><br />
+        <img [src]="previewUrl" alt="Preview" width="200" style="border: 1px solid #ccc;" />
+    </div>
+
+    <button type="submit" [disabled]="!selectedFile">Save</button>
+  </form>
+  

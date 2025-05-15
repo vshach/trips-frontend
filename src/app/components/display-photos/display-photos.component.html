@@ -1,0 +1,5 @@
+<p>DISPLAY Photos below</p>
+@for (onePhoto of photos; track $index) {    
+    <img  class="images" src="{{onePhoto.filepath}}" (click)="onSelectPhoto(onePhoto)" width="25%" height="25%" />
+    &nbsp;
+}

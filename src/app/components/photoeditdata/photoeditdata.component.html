@@ -1,0 +1,30 @@
+<p>Editing the photo data</p>
+<table style="border-collapse: collapse; border: 1px solid black; margin: 0; display: inline-table;">
+<tr>
+    <td style="max-width: 450px;">
+        @if (selectedPhoto?.filepath !='') {
+          <img src="{{selectedPhoto?.filepath}}"  style = "max-width: 450px;"/>
+    }</td>
+    <td>
+        <table border = 1>
+            <tr><td>Date taken: &nbsp;
+                <input type="text" [(ngModel)]="selectedPhoto!.dateTaken"/>
+            </td></tr>
+            <tr><td>Location:  &nbsp;                
+                <select type="select" [(ngModel)]="selectedPhoto!.locationID" required>        
+                    @for (loc of locations; track loc) {
+                      <option value={{loc.id}}> {{loc.name}} </option>
+                    }
+                  </select>
+            </td></tr>
+            <tr><td>People:&nbsp;
+                <input type="text" [(ngModel)]="selectedPhoto!.people"/>
+            </td></tr>
+
+            <tr><td>        
+                <button class="primary" (click)="saveChanges()">Save changes</button> </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>

@@ -1,0 +1,23 @@
+<div class="container">        
+
+  <table>
+    <tr><!--td  width="500px;">bla bla bla bla bla!<app-stops></app-stops> </td-->
+    <td><form >
+    Location: <select name="locations" id="locations" type="select" [(ngModel)]="location">        
+        @for (loc of locations; track loc) {
+          <option value={{loc.id}}> {{loc.name}} </option>
+        }
+      </select>
+    Starting from date:
+    <input type="text" id="startdate" name="startdate" [(ngModel)]="startdate"/>
+      <br><br> 
+      <div>        
+        <button class="primary" (click)="lookup()">Search</button>
+      </div>
+    </form>
+    
+    <button class="primary" (click)="navtoedit()">Edit</button>
+    </td>    
+    </tr>
+  </table>
+</div>

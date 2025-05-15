@@ -1,0 +1,9 @@
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buttons * {
+    flex: 1 1 auto;
+  }

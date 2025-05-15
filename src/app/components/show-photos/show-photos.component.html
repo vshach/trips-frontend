@@ -1,0 +1,5 @@
+<p>Photos SINCE the given date below</p>
+<div *ngIf="loading">Loading photos...</div>
+<div *ngIf="trouble">{{ trouble }}</div>
+
+<app-display-photos *ngIf="!loading && !trouble" [photos]="photos"></app-display-photos>

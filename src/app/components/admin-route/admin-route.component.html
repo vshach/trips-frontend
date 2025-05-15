@@ -1,0 +1,19 @@
+<table>
+    <tr> 
+    <td><form >
+    Year: <select name="years" id="years" type="select" [(ngModel)]="chosen_year" (ngModelChange)="onYearChange($event)">        
+        @for (oneYear of years; track oneYear) {
+            <option value={{oneYear}}> {{oneYear}} </option>
+          }
+      </select>
+      Date: 
+      <select name="date" id="date" type="select" [(ngModel)]="chosen_date">
+        @for ( oneDate of dates; track oneDate){
+            <option value={{oneDate}}> {{oneDate}} </option>
+        }
+      </select>
+      &nbsp;&nbsp;&nbsp;<button class="primary" (click)="showRoute()">Show route</button>
+    </form>
+    </td>
+    </tr>
+</table>
