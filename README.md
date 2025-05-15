@@ -5,7 +5,7 @@ Other components located in the trips-backend repo are:
 <li>SpringBoot server + photo directory on that SpringBoot server;</li>
 <li>MSSQL data base, where the metadata about the photos and routes per day are located. </li>
 </ul>
-I assume that the server is running at localhost:8080.
+I assume that the server is running at localhost:8080, as stated in proxy.conf.json.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
